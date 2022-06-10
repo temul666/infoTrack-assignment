@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  api:
+    build: ./API
+    environment:
+      ASPNETCORE_URLS: "http://+:5100"
+    ports:
+      - "5100:5100"
+  scrape-job:
+    build: ./ScrapeJob
+  react-app:
+    build: ./ReactApp
+    ports:
+      - "3000:3000"
